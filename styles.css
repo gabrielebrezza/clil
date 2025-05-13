@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
@@ -14,7 +12,6 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
 header {
     background-color: #006F77;
     color: white;
@@ -38,9 +35,6 @@ header img{
     border-radius: 50%;
     transition: .5s ease-in-out;
 }
-/* header.active{
-    padding: 0;
-} */
 header.active img {
     left: 50px;
     top: 50%;
@@ -48,7 +42,6 @@ header.active img {
     width: 75px;
     height: 75px;
 }
-
 header h1 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -58,11 +51,9 @@ header h1 {
     margin-top: 125px;
     transition: .25s ease-in-out .25s;
 }
-
 header.active h1{
     margin: 0;
 }
-
 nav ul {
     list-style: none;
     margin-top: 10px;
@@ -70,12 +61,10 @@ nav ul {
     justify-content: center;
     align-items: center;
 }
-
 nav ul li {
     display: flex;
     margin-right: 20px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -85,23 +74,14 @@ nav ul li a {
     filter: drop-shadow(5px 5px 3px #00000000);
     transition: all .25s ease-in-out;
 }
-nav:has(a:hover) a:not(:hover) {
-    color: #3ec2cb;
-    opacity: .5;
-    filter: blur(1px);
-}
-
-
 main {
     margin-top: 325px;
 }
-
 h2 {
     color: #006F77;
     font-size: 1.8em;
     margin-bottom: 20px;
 }
-
 section {
     background-color: white;
     padding: 20px;
@@ -122,23 +102,18 @@ section {
     from {
         opacity: .75;
     }
-
     to {
         opacity: 1;
     }
-}
-section:hover{
-    filter: drop-shadow(10px 10px 10px #d4d2d2);
 }
 section .text{
     line-height: 30px;
     text-align: left;
     width: 50%;
-    background: linear-gradient(270deg, #f9f9f9, #0ab9c5, #20b7c2, #333); /* loop */
+    background: linear-gradient(270deg, #f9f9f9, #0ab9c5, #20b7c2, #333);
     background-size: 300% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
     animation-name: slideGradient;
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
@@ -147,12 +122,12 @@ section .text{
 }
 @keyframes slideGradient {
     0% {
-      background-position: 100% 0;
+        background-position: 100% 0;
     }
     100% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
-  }
+}
 section .text .accentedText{
     font-weight: 700;
     color: #0ab9c5;
@@ -174,18 +149,11 @@ section .imgContainer{
     object-fit: contain;
     transition: all .25s ease-in-out;
 }
-section .imgContainer:has(img:hover), section .imgContainer:has(video:hover){
-    filter: drop-shadow(7px 7px 3px #0ab9c5);
-}
 section .imgContainer img, section .imgContainer video {
     transition: all .25s ease-in-out;
     width: 100%;
     height: 100%;
 }
-section .imgContainer img:hover, section .imgContainer video:hover{
-    transform: scale(1.15);
-}
-
 @media (max-width: 768px) {
     header.active{
         background: #006f77e5;
@@ -226,13 +194,27 @@ section .imgContainer img:hover, section .imgContainer video:hover{
         width: 100%;
     }
 }
-
+@media (hover: hover) and (pointer: fine) {
+    nav:has(a:hover) a:not(:hover) {
+        color: #3ec2cb;
+        opacity: .5;
+        filter: blur(1px);
+    }
+    section:hover{
+        filter: drop-shadow(10px 10px 10px #d4d2d2);
+    }
+    section .imgContainer:has(img:hover), section .imgContainer:has(video:hover){
+        filter: drop-shadow(7px 7px 3px #0ab9c5);
+    }
+    section .imgContainer img:hover, section .imgContainer video:hover{
+        transform: scale(1.15);
+    }
+}
 footer {
     background-color: #006F77;
     color: white;
     text-align: center;
     padding: 10px;
-    /* margin-top: 40px; */
     width: 100%;
 }
 footer .credits{
