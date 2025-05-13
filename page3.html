@@ -5,31 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History of Hydrogen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>History of Hydrogen</h1>
+        <img id="logo" src="logo.png" alt="LOGO">
+        <h1>History Of Hydrogen</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page2.html">Hydrogen Production</a></li>
-                <li><a href="page4.html">Hydrogen in Transportation</a></li>
-                <li><a href="page5.html">Safety Measures</a></li>
+                <li>
+                    <a href="index.html">
+                        <span class="material-symbols-rounded">
+                            home
+                        </span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="page1.html">
+                        <span class="material-symbols-rounded">
+                            experiment
+                        </span>
+                        Myth 1
+                    </a>
+                </li>
+                <li>
+                    <a href="page2.html">
+                        <span class="material-symbols-rounded">
+                            experiment
+                        </span>
+                        Myth 2
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Early Discoveries</h2>
-            <p>Hydrogen was first identified as a distinct substance in the 16th century by Paracelsus. Its flammability was noted by Henry Cavendish in the 18th century.</p>
-            <h2>Industrial Applications</h2>
-            <p>Throughout the 19th and 20th centuries, hydrogen found applications in various industries, including the production of ammonia for fertilizers and as a fuel in rockets.</p>
-            <h2>Modern Developments</h2>
-            <p>Today, hydrogen is being explored as a clean energy source, with research focusing on improving production methods and expanding its use in transportation and industry.</p>
+            <div class="text">
+                <h2>Hydrogen Safety: Dispelling Myths and Embracing Facts</h2>
+                <p>The perception of hydrogen as a dangerous fuel often stems from historical events like the Hindenburg disaster. However, investigations reveal that the hydrogen did not explode; instead, it burned rapidly, with most of the fire attributed to other materials like diesel and the airship's covering.</p>
+                <p>All fuels carry inherent risks if misused. Notably, hydrogen can be safer than gasoline. For instance, hydrogen refueling systems are designed with tight seals and automatic shut-off mechanisms in case of anomalies—features not commonly found in traditional petrol pumps.</p>
+            </div>
+            <div class="imgContainer">
+                <img src="https://media.istockphoto.com/id/1440443247/it/foto/lingegneria-che-tocca-h2-fuel-modern-manufacturing-ecologia-industriale-tecnologia-a-zero.jpg?s=612x612&w=0&k=20&c=HaJjvgF8jVtHLeGQzc0RiIZnmntiWcydxWq9JBfve8k=" alt="Hydrogen safety measures" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>Hydrogen Infrastructure: Current Landscape and Future Prospects</h2>
+                <p>A common question arises: Why aren't there more hydrogen fueling stations? The primary reason is the current limited number of hydrogen vehicles. However, this scenario is evolving.</p>
+                <p>In 2015, Aberdeen launched the UK's first hydrogen production and bus refueling station as part of a £19 million green transport project. This initiative included the deployment of hydrogen-powered buses, marking a significant step towards sustainable public transport.</p>
+                <p>Similarly, in Swindon, the Hydrogen Hub project facilitated the leasing of hydrogen vehicles to businesses, supported by government subsidies. This collaborative effort aims to integrate hydrogen fuel cell technology into various sectors, including transportation.</p>
+            </div>
+            <div class="imgContainer">
+                <img src="https://media.istockphoto.com/id/1494263745/it/foto/auto-a-celle-a-combustibile-presso-la-stazione-di-rifornimento-di-idrogeno.jpg?s=612x612&w=0&k=20&c=YPDMLsU80xmKr2ASq2gmz-Q0LOjgtn6UX6GdZ-J00PA=" alt="Hydrogen fueling station" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>Global Progress in Hydrogen Adoption</h2>
+                <p>By the end of 2018, the global landscape of hydrogen fueling stations had expanded significantly, with 369 stations operating worldwide. :[oaicite:6]{index=6} Japan led with 100 stations, followed by Germany with 60, and California with 39. Asia and Europe are at the forefront of this growth, and the numbers continue to rise as countries invest in hydrogen infrastructure.</p>
+                <p>This expansion reflects a growing recognition of hydrogen's potential as a clean energy source, prompting increased investments and policy support across various regions.</p>
+            </div>
+            <div class="imgContainer">
+                <img src="https://media.istockphoto.com/id/640182996/it/foto/batteria-con-globo-mondiale-e-foglia-verde.jpg?s=612x612&w=0&k=20&c=85jDr4SnGplxcfV8SiIBsU19xNfCI29owOBFEEPs43g=" alt="Global hydrogen adoption" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>The Future of Hydrogen: Towards a Sustainable Energy Landscape</h2>
+                <p>The trajectory of hydrogen energy is promising, especially in countries like the UK, where early projects have demonstrated feasibility and garnered investor confidence. As hydrogen vehicles become more prevalent, the supporting infrastructure is expected to grow accordingly, mirroring the development pattern observed with electric vehicles.</p>
+                <p>Continued advancements in technology, coupled with supportive policies and public-private partnerships, are essential to realizing hydrogen's role in a sustainable energy future.</p>
+            </div>
+            <div class="imgContainer">
+                <img src="https://media.istockphoto.com/id/1346614172/it/foto/logo-dellidrogeno-sul-distributore-di-carburante-delle-stazioni-di-servizio-h2-combustione.jpg?s=612x612&w=0&k=20&c=DIEMYVepDDvjTUBmZOSfl3NpE9JmBAWDsLlAhMImpd4=" alt="Future of hydrogen energy" class="section-image">
+            </div>
         </section>
     </main>
+    
     <footer>
-        <p>&copy; 2025 Hydrogen Safety Campaign</p>
+        <p>&copy; <span id="footerDate"></span> Hydrogen Safety Campaign</p>
+        <p class="credits">Aceto Luca, Brezza Gabriele, Cordone Lorenzo, Rossi Jacopo</p>
     </footer>
 </body>
 </html>

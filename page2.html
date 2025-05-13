@@ -5,32 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydrogen Production</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Hydrogen Production</h1>
+        <img id="logo" src="logo.png" alt="LOGO">
+        <h1>History Of Hydrogen</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page3.html">History of Hydrogen</a></li>
-                <li><a href="page4.html">Hydrogen in Transportation</a></li>
-                <li><a href="page5.html">Safety Measures</a></li>
+                <li>
+                    <a href="index.html">
+                        <span class="material-symbols-rounded">
+                            home
+                        </span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="page1.html">
+                        <span class="material-symbols-rounded">
+                            experiment
+                        </span>
+                        Myth 1
+                    </a>
+                </li>
+                <li>
+                    <a href="page3.html">
+                        <span class="material-symbols-rounded">
+                            experiment
+                        </span>
+                        Myth 3
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Methods of Hydrogen Production</h2>
-            <p>Hydrogen can be produced through various methods:</p>
-            <ul>
-                <li><strong>Electrolysis:</strong> Using electricity to split water into hydrogen and oxygen. When powered by renewable energy, this method produces green hydrogen with minimal environmental impact.</li>
-                <li><strong>Steam Methane Reforming (SMR):</strong> Extracting hydrogen from natural gas. This process is more common but produces carbon emissions unless combined with carbon capture technologies.</li>
-            </ul>
-            <p>Advancements in technology are making hydrogen production more efficient and environmentally friendly, ensuring its role in a sustainable energy future.</p>
+            <div class="text">
+                <h2>The Dangers of Storing and Using Hydrogen Gas</h2>
+                <p>Hydrogen gas (H₂) is increasingly considered a key energy carrier for the transition to clean energy. However, its storage and usage come with significant risks and challenges due to its unique physical and chemical properties. This section provides an overview of the primary dangers associated with hydrogen gas.</p>
+            </div>
+            <div class="imgContainer">
+                <img src="https://media.istockphoto.com/id/1287531792/it/foto/primo-piano-di-un-cartello-bianco-danger-h2s-gas.jpg?s=612x612&w=0&k=20&c=osHQurjlzpRCaLGLvVfW-idxf_zcw3-b1V06cUTrqSA=" alt="Hydrogen flame" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>High Flammability and Explosive Nature</h2>
+                <p>Hydrogen is one of the most flammable gases known. It ignites with a very low ignition energy—about 0.02 millijoules, which is nearly ten times less than what is required for gasoline vapor. This means even a small static spark can trigger an explosion.</p>
+                <ul>
+                    <li><strong>Wide Flammability Range:</strong> Hydrogen is flammable in air at concentrations ranging from 4% to 75%.</li>
+                    <li><strong>Low Ignition Temperature:</strong> Hydrogen ignites at just 500°C (932°F), which is relatively low compared to many other fuels.</li>
+                </ul>
+            </div>
+            <div class="imgContainer">
+                <img src="https://www.shutterstock.com/image-photo/hydrogen-leak-detection-sensor-600nw-1234567891.jpg" alt="Hydrogen leak detection" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>Invisible Flame</h2>
+                <p>When hydrogen burns, it produces a nearly invisible flame—especially in daylight. This makes it incredibly dangerous for firefighters and emergency responders, as traditional visual cues of a fire are absent.</p>
+                <ul>
+                    <li><strong>UV and Infrared Emission:</strong> Hydrogen flames primarily emit in the ultraviolet and infrared spectrum, making them visible only with specialized sensors.</li>
+                    <li><strong>Risk of Undetected Fires:</strong> Workers may walk into active flames without realizing it, increasing the risk of severe burns or fatalities.</li>
+                </ul>
+            </div>
+            <div class="imgContainer">
+                <img src="https://www.shutterstock.com/image-photo/hydrogen-storage-tank-embrittlement-600nw-1234567892.jpg" alt="Hydrogen storage tank" class="section-image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="text">
+                <h2>High Diffusivity and Leakage Risks</h2>
+                <p>Hydrogen is the lightest element and the smallest molecule, allowing it to diffuse quickly and escape through tiny leaks.</p>
+                <ul>
+                    <li><strong>Permeability through Materials:</strong> Hydrogen can permeate materials like metal, rubber, and plastic, which are typically impermeable to other gases.</li>
+                    <li><strong>Leak Detection Challenges:</strong> Since it is colorless, odorless, and tasteless, leaks are very hard to detect without proper hydrogen sensors.</li>
+                    <li><strong>Accumulation in Confined Spaces:</strong> In an enclosed area, hydrogen can accumulate near the ceiling due to its low density, creating pockets of explosive gas.</li>
+                </ul>
+            </div>
+            <div class="imgContainer">
+                <img src="https://www.shutterstock.com/image-photo/hydrogen-safety-protocols-600nw-1234567893.jpg" alt="Hydrogen safety protocols" class="section-image">
+            </div>
         </section>
     </main>
+    
     <footer>
-        <p>&copy; 2025 Hydrogen Safety Campaign</p>
+        <p>&copy; <span id="footerDate"></span> Hydrogen Safety Campaign</p>
+        <p class="credits">Aceto Luca, Brezza Gabriele, Cordone Lorenzo, Rossi Jacopo</p>
     </footer>
 </body>
 </html>

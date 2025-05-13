@@ -50,12 +50,12 @@ header.active img {
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
     font-family: "Bungee Shade", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-top: 150px;
+    margin-top: 125px;
     transition: .25s ease-in-out .25s;
 }
 
@@ -112,7 +112,20 @@ section {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    opacity: 1;
     transition: all .25s ease-in-out;
+    animation: appear-opacity linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
+}
+@keyframes appear-opacity {
+    from {
+        opacity: .75;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 section:hover{
     filter: drop-shadow(10px 10px 10px #d4d2d2);
@@ -121,7 +134,25 @@ section .text{
     line-height: 30px;
     text-align: left;
     width: 50%;
+    background: linear-gradient(270deg, #f9f9f9, #0ab9c5, #20b7c2, #333); /* loop */
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation-name: slideGradient;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
 }
+@keyframes slideGradient {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
 section .text .accentedText{
     font-weight: 700;
     color: #0ab9c5;
@@ -143,15 +174,15 @@ section .imgContainer{
     object-fit: contain;
     transition: all .25s ease-in-out;
 }
-section .imgContainer:has(img:hover){
-    filter: drop-shadow(7px 7px 3px #006F77);
+section .imgContainer:has(img:hover), section .imgContainer:has(video:hover){
+    filter: drop-shadow(7px 7px 3px #0ab9c5);
 }
-section .imgContainer img{
+section .imgContainer img, section .imgContainer video {
     transition: all .25s ease-in-out;
     width: 100%;
     height: 100%;
 }
-section .imgContainer img:hover{
+section .imgContainer img:hover, section .imgContainer video:hover{
     transform: scale(1.15);
 }
 
