@@ -276,7 +276,7 @@ section .imgContainer img, section .imgContainer video {
         margin-top: 25px;
     }
     main {
-        margin-top: 350px;
+        margin-top: 50px;
     }
     section {
         flex-direction: column;
