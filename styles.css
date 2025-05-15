@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Arial', sans-serif;
@@ -21,7 +22,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     transition: .75s ease-in-out;
 }
 header img{
@@ -53,6 +54,7 @@ header h1 {
 }
 header.active h1{
     margin: 0;
+    font-size: 1.5em;
 }
 nav ul {
     list-style: none;
@@ -74,13 +76,99 @@ nav ul li a {
     filter: drop-shadow(5px 5px 3px #00000000);
     transition: all .25s ease-in-out;
 }
+#audioController{
+    max-width: 50px;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 100;
+    border-radius: 50em;
+    background: #006F77;
+    color: #f9f9f9;
+    border: none;
+    outline: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .25s ease-in-out;
+}
+#audioController:hover{
+    max-width: 150px;
+    background: #0ab9c5;
+}
+#audioController:hover::after {
+    content: 'Audio Off';
+    white-space: nowrap;
+}
+#audioController.playing:hover::after {
+    content: 'Audio On';
+    white-space: nowrap;
+}
+.hero {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+    z-index: 1;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    transition: .25s ease-in-out;
+}
+header.active ~ .hero{
+    top: 100px;
+    max-height: 100dvh;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0ab9c5;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0ab9c5;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #088a95;
+}
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
 main {
-    margin-top: 325px;
+    position: relative;
+    top: 275px;
+    z-index: 2;
+    background-color: #f5f5f5;
 }
 h2 {
     color: #006F77;
     font-size: 1.8em;
     margin-bottom: 20px;
+}
+
+#start {
+    scroll-margin-top: 125px;
 }
 section {
     background-color: white;
@@ -177,6 +265,16 @@ section .imgContainer img, section .imgContainer video {
     header.active h1{
         margin-top: 35px;
     }
+    .hero p{
+        font-size: .9rem;
+    }
+    .hero .cta-button{
+        margin: 10px 0;
+    }
+    .hero h1{
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
     main {
         margin-top: 350px;
     }
@@ -211,6 +309,8 @@ section .imgContainer img, section .imgContainer video {
     }
 }
 footer {
+    position: relative;
+    top: 575px;
     background-color: #006F77;
     color: white;
     text-align: center;
